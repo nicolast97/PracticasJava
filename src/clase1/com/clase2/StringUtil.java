@@ -1,5 +1,8 @@
 package com.clase2;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class StringUtil
 {
 
@@ -11,11 +14,9 @@ public class StringUtil
 	// Ejemplo: replicate('x',5) ==> 'xxxxx'
 	public static String replicate(char c, int n)
 	{
-		int index = 0;
 		StringBuilder builder = new StringBuilder(n);
-		while (index < n){
+		while (builder.length() < n){
 			builder.append(c);
-			index++;
 		}
 		return builder.toString();
 	}
@@ -26,21 +27,36 @@ public class StringUtil
 	// Ejemplo lpad("5",3,'0') ==> "005"
 	public static String lpad(String s, int n, char c)
 	{
-		return "";
+		StringBuilder builder = new StringBuilder();
+		builder.append(s);
+		while (builder.length() < n) {
+			if (builder.length() < n) {
+				builder.insert(0, c);
+			}
+		}
+		return builder.toString();
 	}
 
 	// Retorna un String[] conteniendo los elementos de arr
 	// representados como cadenas de caracteres
 	public static String[] toStringArray(int arr[])
 	{
-		return null;
+		String[] chars = new String[arr.length];
+		for (int i = 0; i<arr.length; i++) {
+			chars[i] = String.valueOf(arr[i]);
+		}
+		return chars;
 	}
 
 	// Retorna un String[] conteniendo los elementos de arr
 	// representados como cadenas de caracteres
 	public static int[] toIntArray(String arr[])
 	{
-		return null;
+		int[] numbers = new int[arr.length];
+		for (int i = 0; i<arr.length; i++) {
+			numbers[i] = Integer.valueOf(arr[i]);
+		}
+		return numbers;
 	}
 
 	// Retorna la longitud del elemento con mayor cantidad
