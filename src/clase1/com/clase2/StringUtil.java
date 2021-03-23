@@ -30,9 +30,7 @@ public class StringUtil
 		StringBuilder builder = new StringBuilder();
 		builder.append(s);
 		while (builder.length() < n) {
-			if (builder.length() < n) {
-				builder.insert(0, c);
-			}
+			builder.insert(0, c);
 		}
 		return builder.toString();
 	}
@@ -77,5 +75,13 @@ public class StringUtil
 	// a la izquierda, dejando a todos con la longitud del mayor
 	public static void lNormalize(String arr[], char c)
 	{
+		int maxLength = maxLength(arr);
+		for (int i = 0; i < arr.length; i++) {
+			int elementLength = arr[i].length();
+			if (elementLength < maxLength) {
+				String newString = lpad(arr[i],maxLength,c);
+				arr[i] = newString;
+			}
+		}
 	}
 }
