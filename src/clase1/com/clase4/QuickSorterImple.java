@@ -4,9 +4,21 @@ import java.util.Comparator;
 
 public class QuickSorterImple<T extends Comparator<? super T>> implements Sorter{
 
+    private T arr ;
+    private  Comparator c;
+    int start;
+    int end;
+
+    public QuickSorterImple( T arr, Comparator c, int startIndex, int endIndex) {
+        this.arr = arr;
+        this.c = c;
+        this.start = startIndex;
+        this.end = endIndex;
+    }
+
     @Override
-    public void sort(Object arr, Comparator c) {
-       quicksort(arr,c);
+    public void sort(Object []arr, Comparator c) {
+
     }
 
     private void quicksort(T[] array, int startIndex, int endIndex, Comparator c)

@@ -5,7 +5,7 @@ import java.util.Comparator;
 public class HeapSortImple<T extends Comparator<? super T>> implements Sorter {
 
     @Override
-    public void sort(Object arr, Comparator c) {
+    public void sort(Object[] arr, Comparator c) {
 
     }
 
