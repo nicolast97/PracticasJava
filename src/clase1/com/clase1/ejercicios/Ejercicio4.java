@@ -1,8 +1,8 @@
-package com.clase1;
+package com.clase1.ejercicios;
 
 import java.util.Scanner;
 
-import static com.clase1.Ejercicio3.esPrimo;
+import static com.clase1.ejercicios.Ejercicio3.esPrimo;
 
 public class Ejercicio4 {
     public static void main(String[] args) {
