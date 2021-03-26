@@ -1,4 +1,4 @@
-package clase2;
+package com.clase2;
 
 public class Fraccion {
 
